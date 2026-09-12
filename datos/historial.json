@@ -1,0 +1,247 @@
+[
+    {
+        "id": 12,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "11/09/2026 14:22:47"
+    },
+    {
+        "id": 4,
+        "accion": "Solicitud cancelada/eliminada por el usuario",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "11/09/2026 14:17:47"
+    },
+    {
+        "id": 9,
+        "accion": "Solicitud cancelada/eliminada por el usuario",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "11/09/2026 14:17:28"
+    },
+    {
+        "id": 11,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "11/09/2026 13:40:45"
+    },
+    {
+        "id": 11,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "11/09/2026 13:40:17"
+    },
+    {
+        "id": 11,
+        "accion": "Prioridad modificada a 10 (Impacto: 5, Personas: 5)",
+        "fecha_hora": "11/09/2026 13:39:55"
+    },
+    {
+        "id": 11,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "11/09/2026 13:39:24"
+    },
+    {
+        "id": 10,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "11/09/2026 00:28:03"
+    },
+    {
+        "id": 10,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "11/09/2026 00:27:56"
+    },
+    {
+        "id": 10,
+        "accion": "Prioridad modificada a 10 (Impacto: 5, Personas: 5)",
+        "fecha_hora": "11/09/2026 00:27:53"
+    },
+    {
+        "id": 10,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "11/09/2026 00:27:31"
+    },
+    {
+        "id": 9,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "11/09/2026 00:17:18"
+    },
+    {
+        "id": 1,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "10/09/2026 23:45:31"
+    },
+    {
+        "id": 1,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "10/09/2026 23:45:30"
+    },
+    {
+        "id": 1,
+        "accion": "Prioridad modificada a 10 (Impacto: 5, Personas: 5)",
+        "fecha_hora": "10/09/2026 23:45:16"
+    },
+    {
+        "id": 3,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "10/09/2026 23:45:06"
+    },
+    {
+        "id": 3,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "10/09/2026 23:45:04"
+    },
+    {
+        "id": 3,
+        "accion": "Prioridad modificada a 10 (Impacto: 5, Personas: 5)",
+        "fecha_hora": "10/09/2026 23:35:56"
+    },
+    {
+        "id": 7,
+        "accion": "Prioridad ajustada manualmente a 8 (Impacto: 5, Personas: 3)",
+        "fecha_hora": "10/09/2026 23:29:55"
+    },
+    {
+        "id": 8,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "10/09/2026 23:18:32"
+    },
+    {
+        "id": 8,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "10/09/2026 23:18:23"
+    },
+    {
+        "id": 6,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "10/09/2026 23:18:20"
+    },
+    {
+        "id": 6,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "10/09/2026 23:18:18"
+    },
+    {
+        "id": 5,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "10/09/2026 23:18:16"
+    },
+    {
+        "id": 5,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "10/09/2026 23:18:14"
+    },
+    {
+        "id": 8,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "10/09/2026 23:17:48"
+    },
+    {
+        "id": 8,
+        "accion": "Solicitud cancelada/eliminada por el usuario",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "10/09/2026 23:17:29"
+    },
+    {
+        "id": 8,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "10/09/2026 23:16:56"
+    },
+    {
+        "id": 8,
+        "accion": "Solicitud cancelada/eliminada por el usuario",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "10/09/2026 23:16:35"
+    },
+    {
+        "id": 8,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "10/09/2026 23:16:26"
+    },
+    {
+        "id": 7,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "10/09/2026 23:10:50"
+    },
+    {
+        "id": 6,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "10/09/2026 23:08:27"
+    },
+    {
+        "id": 5,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "10/09/2026 23:05:51"
+    },
+    {
+        "id": 4,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "10/09/2026 23:00:36"
+    },
+    {
+        "id": 2,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "09/09/2026 16:38:02"
+    },
+    {
+        "id": 2,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "09/09/2026 16:37:49"
+    },
+    {
+        "id": 3,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "09/09/2026 16:37:21"
+    },
+    {
+        "id": 2,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "09/09/2026 16:36:24"
+    },
+    {
+        "id": 1,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "09/09/2026 16:35:50"
+    }
+]

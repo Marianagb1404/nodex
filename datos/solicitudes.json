@@ -1,0 +1,102 @@
+[
+    {
+        "id": 11,
+        "recurso": "Parlante",
+        "ubicacion": "Salon 101",
+        "descripcion": "no suena",
+        "impacto_academico": 5,
+        "personas_afectadas": 5,
+        "prioridad": "ALTA",
+        "estado": "SOLUCIONADO"
+    },
+    {
+        "id": 7,
+        "recurso": "Sillas Mesa",
+        "ubicacion": "Piso 3 zona ascensor",
+        "descripcion": "estan dañadas, requieren reparación",
+        "impacto_academico": 5,
+        "personas_afectadas": 3,
+        "prioridad": "ALTA",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 10,
+        "recurso": "Video Beam",
+        "ubicacion": "Piso 3 bicentenario",
+        "descripcion": "no funciona",
+        "impacto_academico": 5,
+        "personas_afectadas": 5,
+        "prioridad": "ALTA",
+        "estado": "SOLUCIONADO"
+    },
+    {
+        "id": 1,
+        "recurso": "Computador",
+        "ubicacion": "Sala 02",
+        "descripcion": "no enciende",
+        "impacto_academico": 5,
+        "personas_afectadas": 5,
+        "prioridad": 10,
+        "estado": "SOLUCIONADO"
+    },
+    {
+        "id": 3,
+        "recurso": "Aire acondicionado",
+        "ubicacion": "Sala 03",
+        "descripcion": "No enfria",
+        "impacto_academico": 5,
+        "personas_afectadas": 5,
+        "prioridad": 10,
+        "estado": "SOLUCIONADO"
+    },
+    {
+        "id": 2,
+        "recurso": "Internet",
+        "ubicacion": "Universidad",
+        "descripcion": "no hay red",
+        "impacto_academico": 5,
+        "personas_afectadas": 5,
+        "prioridad": "ALTA",
+        "estado": "SOLUCIONADO"
+    },
+    {
+        "id": 5,
+        "recurso": "Computador",
+        "ubicacion": "Casa 02",
+        "descripcion": "presenta fallas",
+        "impacto_academico": 5,
+        "personas_afectadas": 3,
+        "prioridad": "ALTA",
+        "estado": "SOLUCIONADO"
+    },
+    {
+        "id": 6,
+        "recurso": "Internet",
+        "ubicacion": "Universidad",
+        "descripcion": "no funciona",
+        "impacto_academico": 5,
+        "personas_afectadas": 3,
+        "prioridad": "ALTA",
+        "estado": "SOLUCIONADO"
+    },
+    {
+        "id": 8,
+        "recurso": "Prueba1",
+        "ubicacion": "Prueba2",
+        "descripcion": "Prueba3",
+        "impacto_academico": 5,
+        "personas_afectadas": 5,
+        "prioridad": "ALTA",
+        "estado": "SOLUCIONADO"
+    },
+    {
+        "id": 12,
+        "recurso": "aire a",
+        "ubicacion": "piso 2",
+        "descripcion": "no enciende",
+        "impacto_academico": 4,
+        "personas_afectadas": 2,
+        "prioridad": "MEDIA",
+        "estado": "PENDIENTE"
+    }
+]
