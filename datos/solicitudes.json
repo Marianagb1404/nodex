@@ -96,7 +96,7 @@
         "descripcion": "no enciende",
         "impacto_academico": 4,
         "personas_afectadas": 2,
-        "prioridad": "MEDIA",
+        "prioridad": "ALTA",
         "estado": "PENDIENTE"
     }
 ]
