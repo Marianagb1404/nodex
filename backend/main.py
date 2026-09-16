@@ -39,8 +39,8 @@ def guardar_solicitud(solicitud):
     with open(archivo, "w", encoding="utf-8") as archivo_json:
         json.dump(solicitudes, archivo_json, indent=4, ensure_ascii=False)
 
-def calcular_minutos_espera(id_solicitud):
 
+def calcular_minutos_espera(id_solicitud):
     actual = historial.cabeza
     fecha_creacion = None
 
@@ -70,8 +70,8 @@ def calcular_minutos_espera(id_solicitud):
 
     return minutos
 
-def actualizar_prioridades_pendientes():
 
+def actualizar_prioridades_pendientes():
     archivo = Path("datos/solicitudes.json")
 
     if not archivo.exists():
@@ -104,7 +104,7 @@ def actualizar_prioridades_pendientes():
             ensure_ascii=False
         )
 
-    # Reconstruir la cola con las nuevas prioridades
+    # Reconstruye la cola con las nuevas prioridades
     cola.cabeza = None
     cola.final = None
 
@@ -140,7 +140,7 @@ def inicio():
 def crear_solicitud(solicitud: Solicitud):
     archivo = Path("datos/solicitudes.json")
     
-    # Cargar las solicitudes existentes para calcular el nuevo ID
+    # Carga las solicitudes existentes para calcular el nuevo ID
     solicitudes_existentes = []
     if archivo.exists():
         with open(archivo, "r", encoding="utf-8") as archivo_json:
@@ -149,7 +149,7 @@ def crear_solicitud(solicitud: Solicitud):
             except json.JSONDecodeError:
                 solicitudes_existentes = []
 
-    # Generar ID automático: si ya existen solicitudes, toma el max(id) + 1, si no empieza en 1
+    # Genera un ID si ya existen solicitudes, toma el id max + 1, de lo contrario empieza en 1
     ids = [s.get("id", 0) for s in solicitudes_existentes if isinstance(s.get("id"), int)]
     nuevo_id = max(ids) + 1 if ids else 1
 
@@ -171,7 +171,6 @@ def crear_solicitud(solicitud: Solicitud):
         "estado": "PENDIENTE"
     }
 
-    # Guardar en archivo JSON y estructuras de datos
     guardar_solicitud(nueva_solicitud)
     cola.insertar(nueva_solicitud)
     
@@ -220,7 +219,7 @@ def obtener_todas_las_solicitudes():
         with open(archivo_historial, "r", encoding="utf-8") as f:
             historial_completo = json.load(f)
 
-    # 3. Vincular a cada solicitud su lista de historial correspondiente
+    # 3. Vincular a cada solicitud su  historial correspondiente
     for solicitud in solicitudes:
         solicitud_id = solicitud.get("id")
         solicitud["historial"] = [
@@ -254,15 +253,13 @@ def cambiar_estado(id: int, cambio: CambioEstado):
 
     nuevo_estado = cambio.estado.upper()
 
-    # Validar que el estado sea correcto
+    # Mirar que el estado sea valido
     estados_validos = ["PENDIENTE", "EN PROCESO", "SOLUCIONADO"]
 
     if nuevo_estado not in estados_validos:
         return {
             "mensaje": "Estado no válido"
         }
-
-    
 
     # Leer las solicitudes guardadas
     archivo = Path("datos/solicitudes.json")
@@ -284,12 +281,12 @@ def cambiar_estado(id: int, cambio: CambioEstado):
             # Actualizar el estado en el diccionario
             solicitud["estado"] = nuevo_estado
 
-            # Si pasa a EN PROCESO o a SOLUCIONADO, la removemos de la cola en memoria
+            # Si pasa a EN PROCESO o a SOLUCIONADO, se quita de la cola en memoria
             if nuevo_estado in ["EN PROCESO", "SOLUCIONADO"]:
                 try:
                     cola.eliminar(id)
                 except Exception:
-                    pass  # Si ya no estaba en la cola, continua normalmente
+                    pass  # (Si ya no estaba en la cola, continua normalmente)
 
             # Guardar en historial (en memoria)
             historial.insertar({
@@ -300,10 +297,10 @@ def cambiar_estado(id: int, cambio: CambioEstado):
                 "fecha_hora": datetime.now().strftime("%d/%m/%Y %H:%M:%S")
             })
 
-            # 1. Guardar historial en el JSON de historial
+            # 1. Guardar historial en JSON
             historial.guardar_en_json()
 
-            # 2. Guardar solicitudes actualizadas en datos/solicitudes.json
+            # 2. Guardar solicitudes act en datos/solicitudes.json
             with open(archivo, "w", encoding="utf-8") as archivo_json:
                 json.dump(
                     solicitudes,
@@ -335,13 +332,13 @@ def eliminar_solicitud(id: int):
         except json.JSONDecodeError:
             solicitudes = []
 
-    # Buscar la solicitud para validar su estado
+    # Busca la solicitud para validar su estado
     solicitud = next((s for s in solicitudes if s.get("id") == id), None)
 
     if not solicitud:
         return {"mensaje": "Solicitud no encontrada", "eliminado": False}
 
-    # Restricción: Solo se puede eliminar si está en estado PENDIENTE
+    # Condición: Solo se puede eliminar si está en estado PENDIENTE
     if solicitud.get("estado") != "PENDIENTE":
         return {
             "mensaje": f"No se puede eliminar la solicitud #{id} porque su estado es '{solicitud.get('estado')}'",
@@ -351,7 +348,6 @@ def eliminar_solicitud(id: int):
     # Filtrar para eliminar la solicitud de la lista
     solicitudes_actualizadas = [s for s in solicitudes if s.get("id") != id]
 
-    # Guardar la lista actualizada en datos/solicitudes.json
     with open(archivo, "w", encoding="utf-8") as archivo_json:
         json.dump(solicitudes_actualizadas, archivo_json, indent=4, ensure_ascii=False)
 
@@ -361,7 +357,7 @@ def eliminar_solicitud(id: int):
     except Exception:
         pass
 
-    # Registrar la cancelación/eliminación en el historial
+    # Registrar la eliminación en el historial
     historial.insertar({
         "id": id,
         "accion": "Solicitud cancelada/eliminada por el usuario",
@@ -379,7 +375,7 @@ def eliminar_solicitud(id: int):
 @app.put("/solicitudes/{id}/prioridad")
 def modificar_prioridad(id: int, datos: ModificarPrioridad):
     try:
-        # 1. Validar rangos (1 a 5)
+    
         if not (1 <= datos.impacto_academico <= 5) or not (1 <= datos.personas_afectadas <= 5):
             return {"mensaje": "Valores de impacto o personas afectadas fuera de rango (1-5)", "actualizado": False}
 
@@ -399,73 +395,42 @@ def modificar_prioridad(id: int, datos: ModificarPrioridad):
         if not solicitud:
             return {"mensaje": f"No se encontró la solicitud #{id}", "actualizado": False}
 
-        # Solo permitir ajustar si está PENDIENTE
+        # Solo permitir modificar si está PENDIENTE
         if solicitud.get("estado") != "PENDIENTE":
             return {
                 "mensaje": f"No se puede modificar la prioridad de la solicitud #{id} porque su estado es '{solicitud.get('estado')}'",
                 "actualizado": False
             }
 
-        # 2. Actualizar valores de impacto y personas afectadas
+        # Reemplazar los valores anteriores por los nuevos
         solicitud["impacto_academico"] = datos.impacto_academico
         solicitud["personas_afectadas"] = datos.personas_afectadas
-        
-        # Calcular nueva prioridad como número entero
-        nueva_prioridad = datos.impacto_academico + datos.personas_afectadas
+
+        minutos_espera = calcular_minutos_espera(id)
+
+        nueva_prioridad = calcular_prioridad(
+            datos.impacto_academico,
+            datos.personas_afectadas,
+            minutos_espera
+        )
         solicitud["prioridad"] = nueva_prioridad
 
-        # 3. Separar pendientes y ordenarlas descendentemente garantizando comparaciones numéricas
+        # obtiene solicitudes pendientes
         solicitudes_pendientes = [s for s in solicitudes if s.get("estado") == "PENDIENTE"]
-        otras_solicitudes = [s for s in solicitudes if s.get("estado") != "PENDIENTE"]
-
-        # Función auxiliar para obtener prioridad numérica segura
-        def obtener_prioridad_numerica(s):
-            prio = s.get("prioridad")
-            if isinstance(prio, int):
-                return prio
-            # Si la prioridad es un string (ej: "ALTA", "MEDIA", "BAJA" o "8"), intentar convertir
-            if isinstance(prio, str) and prio.isdigit():
-                return int(prio)
-            # Si no es numérico, recalcular basándose en impacto + personas afectadas
-            imp = s.get("impacto_academico", 1)
-            per = s.get("personas_afectadas", 1)
-            try:
-                return int(imp) + int(per)
-            except (ValueError, TypeError):
-                return 0
-
-        # Asegurar que todas las solicitudes pendientes tengan su prioridad como int
-        for s in solicitudes_pendientes:
-            s["prioridad"] = obtener_prioridad_numerica(s)
-
-        # Ordenar descendentemente por prioridad numérica
-        solicitudes_pendientes.sort(key=obtener_prioridad_numerica, reverse=True)
-
-        # Unir listas manteniendo pendientes ordenadas arriba
-        solicitudes_actualizadas = solicitudes_pendientes + otras_solicitudes
-
         # Guardar cambios en el JSON
         with open(archivo, "w", encoding="utf-8") as f:
-            json.dump(solicitudes_actualizadas, f, indent=4, ensure_ascii=False)
+            json.dump(solicitudes, f, indent=4, ensure_ascii=False)
 
-        # 4. Reconstruir la cola en memoria según los métodos existentes
-        try:
-            if hasattr(cola, 'cabeza'):
-                cola.cabeza = None
-            elif hasattr(cola, 'vaciar'):
-                cola.vaciar()
+        #Reconstruir la cola en memoria con los métodos existentes
 
-            for s in solicitudes_pendientes:
-                if hasattr(cola, 'insertar'):
-                    cola.insertar(s)
-                elif hasattr(cola, 'encolar'):
-                    cola.encolar(s)
-                elif hasattr(cola, 'push'):
-                    cola.push(s)
-        except Exception as e:
-            print(f"Aviso al actualizar cola en memoria: {e}")
+        cola.cabeza = None
+        cola.final = None
 
-        # 5. Registrar evento en el historial
+        for s in solicitudes_pendientes:
+            cola.insertar(s)    
+
+
+        #Registrar en el historial
         try:
             historial.insertar({
                 "id": id,

@@ -69,16 +69,3 @@ class Historial:
             actual = actual.siguiente
 
         print("Fin")
-
-
-if __name__ == "__main__":
-
-    historial = Historial()
-
-    historial.insertar("Solicitud creada")
-    historial.insertar("Estado cambiado a EN PROCESO")
-    historial.insertar("Estado cambiado a SOLUCIONADO")
-
-    print("HISTORIAL:")
-
-    historial.imprimir_historial()

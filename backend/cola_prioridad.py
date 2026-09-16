@@ -73,22 +73,6 @@ class ColaPrioridad:
 
         return solicitud
 
-    def imprimir_cola(self):
-
-        actual = self.cabeza
-
-        while actual:
-            print(
-                actual.dato["recurso"],
-                "-",
-                actual.dato["prioridad"]
-            )
-
-            actual = actual.siguiente
-
-        print("Fin")
-
-
     def eliminar(self, id_solicitud):
 
         actual = self.cabeza
@@ -116,64 +100,3 @@ class ColaPrioridad:
             actual = actual.siguiente
 
         return None
-
-
-
-
-
-
-
-if __name__ == "__main__":
-
-    cola = ColaPrioridad()
-
-    solicitud1 = {
-    "id": 1,
-    "recurso": "Proyector",
-    "prioridad": "MEDIA"
-    }
-
-    solicitud2 = {
-    "id": 2,
-    "recurso": "Computador",
-    "prioridad": "BAJA"
-    }
-
-    solicitud3 = {
-    "id": 3,
-    "recurso": "Tablero digital",
-    "prioridad": "ALTA"
-    }
-
-    solicitud4 = {
-    "id": 4,
-    "recurso": "Ventilador",
-    "prioridad": "MEDIA"
-    }
-    
-    cola.insertar(solicitud1)
-    cola.insertar(solicitud2)
-    cola.insertar(solicitud3)
-    cola.insertar(solicitud4)
-
-    print("COLA DE PRIORIDAD:")
-    cola.imprimir_cola()
-
-    print("\nATENDIENDO:")
-    solicitud_atendida = cola.atender()
-
-    print(
-        solicitud_atendida["recurso"],
-        "-",
-        solicitud_atendida["prioridad"]
-    )
-
-    print("\nCOLA DESPUÉS DE ATENDER:")
-    cola.imprimir_cola()
-
-    print("\nELIMINANDO PROYECTOR:")
-
-    cola.eliminar(1)
-
-    print("\nCOLA DESPUÉS DE ELIMINAR:")
-    cola.imprimir_cola()    

@@ -529,7 +529,11 @@ if opcion == "📝 Nueva solicitud":
             else:
 
                 # Mostrar las solicitudes guardadas
-                for sol in todas_solicitudes:
+                for sol in sorted(
+                    todas_solicitudes,
+                    key=lambda x: int(x.get("id", 0)),
+                    reverse=True
+                ):
 
                     sol_id = int(sol.get("id"))
                     estado = sol.get("estado", "PENDIENTE")
@@ -608,7 +612,6 @@ if opcion == "📝 Nueva solicitud":
             "No se pudo conectar con el servidor para consultar "
             "el estado de tus solicitudes."
         )
-
 
 
 elif opcion == "📋 Solicitudes":

@@ -1,5 +1,75 @@
 [
     {
+        "id": 15,
+        "accion": "Prioridad modificada a ALTA (Impacto: 5, Personas: 4)",
+        "fecha_hora": "16/09/2026 13:44:37"
+    },
+    {
+        "id": 15,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "16/09/2026 13:44:25"
+    },
+    {
+        "id": 14,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "16/09/2026 13:43:25"
+    },
+    {
+        "id": 13,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "16/09/2026 13:41:52"
+    },
+    {
+        "id": 13,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "16/09/2026 13:41:51"
+    },
+    {
+        "id": 12,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "16/09/2026 13:41:47"
+    },
+    {
+        "id": 12,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "16/09/2026 13:41:46"
+    },
+    {
+        "id": 7,
+        "accion": "Estado cambiado a SOLUCIONADO",
+        "estado_anterior": "EN PROCESO",
+        "estado_nuevo": "SOLUCIONADO",
+        "fecha_hora": "16/09/2026 13:41:44"
+    },
+    {
+        "id": 7,
+        "accion": "Estado cambiado a EN PROCESO",
+        "estado_anterior": "PENDIENTE",
+        "estado_nuevo": "EN PROCESO",
+        "fecha_hora": "16/09/2026 13:41:41"
+    },
+    {
+        "id": 13,
+        "accion": "Prioridad modificada a ALTA (Impacto: 5, Personas: 5)",
+        "fecha_hora": "16/09/2026 13:36:08"
+    },
+    {
+        "id": 13,
+        "accion": "Solicitud creada",
+        "estado_inicial": "PENDIENTE",
+        "fecha_hora": "16/09/2026 13:35:07"
+    },
+    {
         "id": 12,
         "accion": "Solicitud creada",
         "estado_inicial": "PENDIENTE",

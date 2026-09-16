@@ -17,7 +17,7 @@
         "impacto_academico": 5,
         "personas_afectadas": 3,
         "prioridad": "ALTA",
-        "estado": "PENDIENTE"
+        "estado": "SOLUCIONADO"
     },
     {
         "id": 10,
@@ -96,6 +96,36 @@
         "descripcion": "no enciende",
         "impacto_academico": 4,
         "personas_afectadas": 2,
+        "prioridad": "ALTA",
+        "estado": "SOLUCIONADO"
+    },
+    {
+        "id": 13,
+        "recurso": "Aire acondicionado",
+        "ubicacion": "Sala 202",
+        "descripcion": "no enfria",
+        "impacto_academico": 5,
+        "personas_afectadas": 5,
+        "prioridad": "ALTA",
+        "estado": "SOLUCIONADO"
+    },
+    {
+        "id": 14,
+        "recurso": "Computador",
+        "ubicacion": "Sala 03",
+        "descripcion": "No enciende",
+        "impacto_academico": 3,
+        "personas_afectadas": 3,
+        "prioridad": "MEDIA",
+        "estado": "PENDIENTE"
+    },
+    {
+        "id": 15,
+        "recurso": "Baños",
+        "ubicacion": "casa obando",
+        "descripcion": "no hay agua",
+        "impacto_academico": 5,
+        "personas_afectadas": 4,
         "prioridad": "ALTA",
         "estado": "PENDIENTE"
     }
